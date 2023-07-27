@@ -19,12 +19,14 @@ class TechnologyTableSeeder extends Seeder
     {
         $technologies = Technology :: factory() -> count(15) -> create();
 
-        foreach ($technologies as $technology)
+        foreach ($technologies as $technology) {
 
-        $projects = Project :: inRandomOrder() -> limit(rand(1,5)) -> get();
+        $projects = Project :: inRandomOrder() -> limit(rand(3,7)) -> get();
         // qui abbiamo una lista variabile di tecnologie quindi (?)
 
         $technology -> projects() -> attach($projects);
+
+        }
 
 
     }

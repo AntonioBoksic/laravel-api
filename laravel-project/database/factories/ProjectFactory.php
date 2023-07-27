@@ -19,7 +19,7 @@ class ProjectFactory extends Factory
         return [
             'name' => fake() -> word(),
             'programming_language' => fake() ->randomElement(['Javascript', 'Vue', 'PHP', 'Laravel', 'Java', 'Flutter'], 1),
-            'description' => fake() -> paragraph(3),
+            'description' => fake() -> paragraph(2),
             'device' => fake() -> randomElement(['IOS', 'Android', 'Desktop', 'Apple Watch'], 1),
         ];
     }

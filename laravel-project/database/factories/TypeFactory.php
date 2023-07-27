@@ -19,9 +19,9 @@ class TypeFactory extends Factory
         return [
             
             'name' => fake() -> unique() -> randomElement([
-                "ai",
-                "software",
-                "web 3",
+                "Ai",
+                "Software",
+                "Web 3",
                 "Backend",
                 "Frontend"
             ]),

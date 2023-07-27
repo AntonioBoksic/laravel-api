@@ -26,6 +26,21 @@
             <div class="my-3">
             <strong>type:</strong> {{$project -> type -> name}}
             </div>
+
+            
+            <div class="my-3">
+
+            <strong>technology:</strong> 
+            @foreach ($project -> technologies as $technology)
+            <span>
+            {{$technology -> name}} {{$technology -> version}},
+            </span>
+            @endforeach
+             
+            
+            </div>
+
+
            
 
         </div>

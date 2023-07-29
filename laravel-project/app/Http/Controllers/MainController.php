@@ -46,5 +46,17 @@ class MainController extends Controller
         return redirect() -> route('project.show', $project -> id);
     }
 
+    public function edit($id) {
+
+        $types = Type :: all();
+
+        $project = Project :: findOrFail($id);
+
+       
+
+        return view('project.edit', compact('types','project'));
+
+    }
+
    
 }

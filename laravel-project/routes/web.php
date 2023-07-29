@@ -44,9 +44,20 @@ Route::get('/show/{id}', [MainController::class, 'show'])->name('project.show')
 //aggiungiamo questa linea di codice per riservare la rotta '/show/{id}' a utenti loggati
 ->middleware(['auth', 'verified']);
 
+
+// create e store
 Route::get('/create',[MainController::class, 'create'])->name('project.create')
 ->middleware(['auth', 'verified']);
 
 Route::post('/store',[MainController::class, 'store'])->name('project.store')
 ->middleware(['auth', 'verified']);
+
+// edit e update
+Route::post('/edit/{id}',[MainController::class, 'edit'])->name('project.edit')
+->middleware(['auth', 'verified']);
+
+Route::post('/update/{id}',[MainController::class, 'update'])->name('project.update')
+->middleware(['auth', 'verified']);
+
+
 

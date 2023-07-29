@@ -20,6 +20,8 @@ class Project extends Model
         'description',
         'device',
 
+        'main_picture',
+
         'type_id'
 
     ];

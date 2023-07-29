@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('description');
             $table->string('device');
 
+            $table->string('main_picture') -> nullable();
+
             $table->timestamps();
         });
     }

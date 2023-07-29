@@ -11,17 +11,23 @@
 
             <form 
             action=" {{ route('project.store') }} "
-            method="POST">
+            method="POST"
+            enctype="multipart/form-data">
 
             @csrf
             @method("POST")
+
+            <label for="main_picture">Main picture</label>
+            <br>
+            <input type="file" name="main_picture">
+            <br>
 
             <label for="name">Name</label>
             <br>
             <input type="text" name="name">
             <br>
 
-            <label for="programming_language">Programming_language</label>
+            <label for="programming_language">Programming language</label>
             <br>
             <input type="text" name="programming_language">
             <br>

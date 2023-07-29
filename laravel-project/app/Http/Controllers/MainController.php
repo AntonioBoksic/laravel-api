@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Models\Project;
 use App\Models\Type;
 
+use Illuminate\Support\Facades\Storage;
+
 class MainController extends Controller
 {
     public function index() {
@@ -35,7 +37,10 @@ class MainController extends Controller
     public function store(Request $request) {
 
         $data = $request->all();
-        
+
+        $img_path = Storage :: put('uploads', $data['main_picture']);
+        $data['main_picture'] = $img_path;
+
         $project = Project :: create($data);
 
         return redirect() -> route('project.show', $project -> id);

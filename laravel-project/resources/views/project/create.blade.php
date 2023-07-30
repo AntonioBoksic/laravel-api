@@ -33,7 +33,7 @@
                 <label for="device">Device</label> <br>
                 <input type="text" name="device"> <br>
 
-                <select name="type_id" id="type">
+                <select class="my-2" name="type_id" id="type">
                     @foreach ($types as $type)
                     <option value="{{ $type -> id}}">
                         {{ $type -> name}}
@@ -42,7 +42,9 @@
                     @endforeach
                 </select>
 
-                <input type="submit" value="Create" class="my-2">
+                <br>
+                <input class=" my-2 btn btn-primary" type="submit" value="Create">
+
 
             </form>
         </div>

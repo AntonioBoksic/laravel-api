@@ -65,8 +65,12 @@ class MainController extends Controller
     public function update(Request $request, $id) {
 
         $data = $request -> all();
-        
-        dd($data);
+        //dd($data);
+
+        $project = Project :: findOrFail($id);
+        $project -> update($data);
+
+        return redirect() -> route('project.show', $project -> id);
     }
 
    

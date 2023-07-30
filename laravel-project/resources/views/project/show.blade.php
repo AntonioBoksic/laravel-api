@@ -49,7 +49,7 @@
             <div class="my-3">
                 <a 
                 class="btn btn-primary"
-                href="{{ route('project.edit', $project -> id) }}">Update Project</a>
+                href="{{ route('project.edit', $project -> id) }}">Edit project</a>
             </div>
         </div>
     </div>

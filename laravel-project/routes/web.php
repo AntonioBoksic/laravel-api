@@ -56,8 +56,6 @@ Route::post('/store',[MainController::class, 'store'])->name('project.store')
 Route::post('/edit/{id}',[MainController::class, 'edit'])->name('project.edit')
 ->middleware(['auth', 'verified']);
 
-Route::post('/update/{id}',[MainController::class, 'update'])->name('project.update')
-->middleware(['auth', 'verified']);
 
 
 

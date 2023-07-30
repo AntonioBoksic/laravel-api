@@ -27,6 +27,9 @@ class MainController extends Controller
         return view("project.show", compact("project"));
     }
 
+    //
+    //create() e store()
+
     public function create() {
 
         $types = Type :: all();
@@ -46,13 +49,14 @@ class MainController extends Controller
         return redirect() -> route('project.show', $project -> id);
     }
 
+    //
+    //edit() e update()
+    
     public function edit($id) {
 
         $types = Type :: all();
 
         $project = Project :: findOrFail($id);
-
-       
 
         return view('project.edit', compact('types','project'));
 

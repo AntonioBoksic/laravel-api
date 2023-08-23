@@ -16,4 +16,14 @@ class ProjectController extends Controller
             'projects' => $projects
         ]);
     }
+
+    public function projectShow($id) {
+        $project = Project :: with("type", "technologies")
+        -> findOrFail($id);
+
+        return response()->json([
+            'project' => $project
+        ]);
+
+    }
 }
